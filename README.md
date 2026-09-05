@@ -36,7 +36,7 @@ question-answering task: no answer options, questions, or task-specific
 fine-tuning influence the metadata. This separation allows the same index to
 support multiple solver configurations or future challenge tracks.
 
-## How It Works
+## How AVRA Works
 
 1. **Extract audio events.** A sound event detection model processes each
    video's audio track and produces timestamped event labels with confidence
