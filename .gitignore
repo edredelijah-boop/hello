@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Model weights (fetch per docs/MODELS.md)
+*.pt
+*.pdparams
+*.onnx
+
+# Extractor working state and outputs
+frames/
+data_root/
+*.npy
+*.mp4
+*.mkv
+*.webm
+
+# Test scratch
+tests/_fixture/
+tests/_work/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/

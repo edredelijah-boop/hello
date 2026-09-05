@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "avra-metadata-extractor"
+version = "0.1.0"
+description = "Precompute per-video audio-event, object, and on-screen-text indices for the AVRA solver"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Edred Azziz" },
+  { name = "Juhyung Ha" },
+  { name = "David Crandall" },
+]
+keywords = ["sound-event-detection", "object-detection", "ocr", "video", "perception-test"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy==2.2.6",
+  "torch",
+  "torchaudio",
+  "librosa==0.11.0",
+  "soundfile==0.14.0",
+  "pillow==12.3.0",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+# YOLOE object detection. ultralytics is AGPL-3.0 -- see NOTICE and docs/MODELS.md.
+objects = [
+  "ultralytics>=8.3",
+  "opencv-python-headless==4.14.0.94",
+]
+# PP-OCRv6 on-screen text. Pin to the versions in your working OCR environment.
+text = [
+  "paddleocr>=3.0",
+  "paddlepaddle>=3.0",
+]
+all = [
+  "avra-metadata-extractor[objects,text]",
+]
+dev = [
+  "rapidfuzz",
+  "pytest",
+]
+
+[project.urls]
+Homepage = "https://github.com/eazziz/AVRA-Metadata-Extractor"
+Solver = "https://github.com/juhha/AVRA-Solver"
+
+[project.scripts]
+avra-extract = "avra_metadata_extractor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

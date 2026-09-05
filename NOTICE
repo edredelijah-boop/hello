@@ -1,0 +1,40 @@
+AVRA-Metadata-Extractor
+Copyright (c) 2026 Team IUCV, Indiana University Bloomington.
+
+This product includes third-party material:
+
+--------------------------------------------------------------------------------
+BEATs (audio encoder architecture)
+    src/avra_metadata_extractor/audio/beats/{BEATs.py,backbone.py,modules.py}
+    Copyright (c) 2022 Microsoft.
+    Licensed under the MIT License.
+    Source: https://github.com/microsoft/unilm/tree/master/beats
+    Vendored unchanged except that intra-package imports were made relative.
+
+--------------------------------------------------------------------------------
+BEATs strong SED head + checkpoints (PretrainedSED)
+    The prediction head in audio/head.py and the BEATs_strong_*.pt checkpoints
+    it loads are from:
+        F. Schmid et al., "Effective Pre-Training of Audio Transformers for
+        Sound Event Detection", ICASSP 2025.
+        https://github.com/fschmid56/PretrainedSED
+    Checkpoints are downloaded by the user, not distributed here. Consult that
+    repository for its license and the AudioSet terms it depends on.
+
+--------------------------------------------------------------------------------
+Ultralytics / YOLOE  (optional "objects" extra)
+    Licensed under AGPL-3.0-or-later. https://github.com/ultralytics/ultralytics
+    This project only imports ultralytics at runtime and does not redistribute
+    it or its weights. If you redistribute a bundle that includes ultralytics,
+    the AGPL-3.0 terms apply to that bundle. A commercial Ultralytics license
+    is an alternative.
+
+--------------------------------------------------------------------------------
+PaddleOCR / PaddlePaddle  (optional "text" extra)
+    Licensed under the Apache License 2.0.
+    https://github.com/PaddlePaddle/PaddleOCR
+
+--------------------------------------------------------------------------------
+AudioSet class names
+    src/avra_metadata_extractor/audioset_classes.py contains the 447 AudioSet
+    "strong" class names (Google, CC BY 4.0). https://research.google.com/audioset/

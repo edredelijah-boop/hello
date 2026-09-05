@@ -1,0 +1,51 @@
+0	person
+1	dog
+2	cat
+3	bird
+4	duck
+5	horse
+6	car
+7	bus
+8	truck
+9	bicycle
+10	motorcycle
+11	ambulance
+12	fire engine
+13	garbage truck
+14	police car
+15	taxi
+16	train
+17	boat
+18	ferry
+19	cruise ship
+20	bench
+21	umbrella
+22	flag
+23	ladder
+24	tent
+25	awning
+26	traffic light
+27	fire hydrant
+28	trash can
+29	clock
+30	clock tower
+31	bell
+32	statue
+33	suitcase
+34	baby stroller
+35	skateboard
+36	shopping cart
+37	wheelchair
+38	basketball
+39	ball
+40	ferris wheel
+41	forklift
+42	broom
+43	horse carriage
+44	guitar
+45	drum
+46	television
+47	bottle
+48	fountain
+49	crane
+50	leaf blower

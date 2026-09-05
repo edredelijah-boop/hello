@@ -1,0 +1,447 @@
+0	Accelerating, revving, vroom
+1	Air brake
+2	Air conditioning
+3	Air horn, truck horn
+4	Aircraft
+5	Aircraft engine
+6	Alarm
+7	Alarm clock
+8	Alert
+9	Ambulance (siren)
+10	Animal
+11	Applause
+12	Arrow
+13	Artillery fire
+14	Audio logo
+15	Babbling
+16	Baby cry, infant cry
+17	Baby laughter
+18	Background noise
+19	Bang
+20	Bark
+21	Basketball bounce
+22	Bathroom sounds
+23	Bathtub (filling or washing)
+24	Battle cry
+25	Bee, wasp, etc.
+26	Beep, bleep
+27	Bell
+28	Bellow
+29	Belly laugh
+30	Bicycle bell
+31	Bicycle, tricycle
+32	Bird
+33	Bird flight, flapping wings
+34	Bird vocalization, bird call, bird song
+35	Biting
+36	Bleat
+37	Blender, food processor
+38	Boat, Water vehicle
+39	Boiling
+40	Boing
+41	Booing
+42	Boom
+43	Bouncing
+44	Bow-wow
+45	Breaking
+46	Breathing
+47	Brief tone
+48	Burping, eructation
+49	Burst, pop
+50	Bus
+51	Busy signal
+52	Buzz
+53	Buzzer
+54	Cacophony
+55	Camera
+56	Canidae, wild dogs, wolves
+57	Cap gun
+58	Car
+59	Car alarm
+60	Car passing by
+61	Carbon monoxide detector, CO detector
+62	Cart
+63	Cash register
+64	Cat
+65	Caterwaul
+66	Cattle, bovinae
+67	Caw
+68	Cellphone buzz, vibrating alert
+69	Chain
+70	Chainsaw
+71	Change ringing (campanology)
+72	Channel, environment and background
+73	Chant
+74	Cheering
+75	Chewing, mastication
+76	Chicken, rooster
+77	Child singing
+78	Child speech, kid speaking
+79	Children playing
+80	Children shouting
+81	Chime
+82	Chipmunk
+83	Chirp tone
+84	Chirp, tweet
+85	Choir
+86	Chop
+87	Chopping (food)
+88	Chorus effect
+89	Chuckle, chortle
+90	Church bell
+91	Civil defense siren
+92	Clang
+93	Clapping
+94	Clatter
+95	Clickety-clack
+96	Clicking
+97	Clip-clop
+98	Clock
+99	Cluck
+100	Clunk
+101	Coin (dropping)
+102	Computer keyboard
+103	Conversation
+104	Coo
+105	Cough
+106	Cowbell
+107	Crack
+108	Crackle
+109	Creak
+110	Cricket
+111	Croak
+112	Crockery breaking and smashing
+113	Crow
+114	Crowd
+115	Crowing, cock-a-doodle-doo
+116	Crumpling, crinkling
+117	Crunch
+118	Crushing
+119	Crying, sobbing
+120	Cupboard open or close
+121	Cutlery, silverware
+122	Deformable shell
+123	Dental drill, dentist's drill
+124	Dial tone
+125	Digestive
+126	Ding
+127	Ding-dong
+128	Dishes, pots, and pans
+129	Distortion
+130	Dog
+131	Domestic animals, pets
+132	Dong, bong
+133	Donkey, ass
+134	Door
+135	Doorbell
+136	Drawer open or close
+137	Drill
+138	Drip
+139	Duck call (hunting tool)
+140	Ducks, geese, waterfowl
+141	Echo
+142	Effects unit
+143	Electric rotor drone, quadcopter
+144	Electric shaver, electric razor
+145	Electric toothbrush
+146	Electronic tuner
+147	Emergency vehicle
+148	Engine
+149	Engine knocking
+150	Engine starting
+151	Environmental noise
+152	Error signal
+153	Eruption
+154	Explosion
+155	Fart
+156	Female singing
+157	Female speech, woman speaking
+158	Filing (rasp)
+159	Fill (with liquid)
+160	Finger snapping
+161	Fire
+162	Fire alarm
+163	Fire engine, fire truck (siren)
+164	Firecracker
+165	Fireworks
+166	Fixed-wing aircraft, airplane
+167	Fizz
+168	Flap
+169	Fly, housefly
+170	Foghorn
+171	Fowl
+172	Frog
+173	Frying (food)
+174	Fusillade
+175	Gargling
+176	Gasp
+177	Gears
+178	Generic impact sounds
+179	Giggle
+180	Glass
+181	Glass chink, clink
+182	Glass shatter
+183	Goat
+184	Gobble
+185	Grind
+186	Groan
+187	Growling
+188	Grunt
+189	Gull, seagull
+190	Gunshot, gunfire
+191	Gurgling, bubbling
+192	Gush
+193	Hair dryer
+194	Hammer
+195	Hands
+196	Heart sounds, heartbeat
+197	Heavy engine (low frequency)
+198	Helicopter
+199	Hiccup
+200	Hiss
+201	Honk
+202	Hoot
+203	Horse
+204	Howl
+205	Howl (wind)
+206	Hubbub, speech noise, speech babble
+207	Hum
+208	Human group actions
+209	Human locomotion
+210	Human sounds
+211	Human voice
+212	Humming
+213	Ice cream truck, ice cream van
+214	Idling
+215	Insect
+216	Inside, large room or hall
+217	Inside, public space
+218	Inside, small room
+219	Jackhammer
+220	Jet engine
+221	Jingle bell
+222	Jingle, tinkle
+223	Kettle whistle
+224	Keypress tone
+225	Keys jangling
+226	Kitchen and dining room sounds
+227	Knife
+228	Knock
+229	Laughter
+230	Lawn mower
+231	Light engine (high frequency)
+232	Liquid
+233	Livestock, farm animals, working animals
+234	Lock
+235	Machine gun
+236	Mains hum
+237	Male singing
+238	Male speech, man speaking
+239	Mantra
+240	Mechanical bell
+241	Mechanical fan
+242	Mechanisms
+243	Medium engine (mid frequency)
+244	Meow
+245	Microphone
+246	Microwave oven
+247	Moo
+248	Mosquito
+249	Motor vehicle (road)
+250	Motorboat, speedboat
+251	Motorcycle
+252	Mouse
+253	Music
+254	Narration, monologue
+255	Neigh, whinny
+256	Noise
+257	Non-motorized land vehicle
+258	Ocean
+259	Oink
+260	Other sourceless
+261	Outside, urban or manmade
+262	Owl
+263	Packing tape, duct tape
+264	Pant
+265	Pant (dog)
+266	Paper rustling
+267	Patter
+268	Pig
+269	Pigeon, dove
+270	Ping
+271	Plop
+272	Police car (siren)
+273	Pour
+274	Power saw, circular saw, table saw
+275	Power tool
+276	Power windows, electric windows
+277	Printer
+278	Propeller, airscrew
+279	Puff
+280	Pulleys
+281	Pulse
+282	Pump (liquid)
+283	Purr
+284	Quack
+285	Race car, auto racing
+286	Radio
+287	Rail transport
+288	Railroad car, train wagon
+289	Rain
+290	Rain on surface
+291	Raindrop
+292	Rapping
+293	Ratchet, pawl
+294	Rattle
+295	Refrigerator
+296	Respiratory sounds
+297	Reverberation
+298	Reversing beeps
+299	Ringing tone, ringback tone
+300	Ringtone
+301	Roar
+302	Roaring cats (lions, tigers)
+303	Rodents, rats, mice
+304	Roll
+305	Rowboat, canoe, kayak
+306	Rub
+307	Rumble
+308	Run
+309	Rustle
+310	Sailboat, sailing ship
+311	Sanding
+312	Sawing
+313	Scissors
+314	Scrape
+315	Scratch
+316	Screaming
+317	Screech
+318	Sewing machine
+319	Sheep
+320	Ship
+321	Shout
+322	Shower
+323	Shuffle
+324	Shuffling cards
+325	Sigh
+326	Sine wave
+327	Singing
+328	Single-lens reflex camera
+329	Sink (filling or washing)
+330	Siren
+331	Sizzle
+332	Skateboard
+333	Slam
+334	Slap, smack
+335	Sliding door
+336	Slosh
+337	Slurp, drinking straw
+338	Smash, crash
+339	Smoke detector, smoke alarm
+340	Snake
+341	Snap
+342	Sneeze
+343	Snicker
+344	Sniff
+345	Snoring
+346	Snort
+347	Snort (horse)
+348	Sonar
+349	Sonic boom
+350	Sound effect
+351	Sound equipment
+352	Sound reproduction
+353	Speech
+354	Speech synthesizer
+355	Splash, splatter
+356	Splinter
+357	Spray
+358	Squawk
+359	Squeak
+360	Squeal
+361	Squish
+362	Stairs
+363	Static
+364	Steam
+365	Steam whistle
+366	Stir
+367	Stomach rumble
+368	Stomp, stamp
+369	Stream, river
+370	Subway, metro, underground
+371	Surface contact
+372	Sweeping
+373	Synthetic singing
+374	Tap
+375	Tap dance
+376	Tape hiss
+377	Tearing
+378	Telephone
+379	Telephone bell ringing
+380	Telephone dialing, DTMF
+381	Television
+382	Throat clearing
+383	Thump, thud
+384	Thunder
+385	Thunderstorm
+386	Thunk
+387	Tick
+388	Tick-tock
+389	Tire squeal, skidding
+390	Toilet flush
+391	Tools
+392	Toothbrush
+393	Traffic noise, roadway noise
+394	Train
+395	Train horn
+396	Train wheels squealing
+397	Train whistle
+398	Trickle, dribble
+399	Truck
+400	Tuning fork
+401	Turkey
+402	Typewriter
+403	Typing
+404	Unknown sound
+405	Vacuum cleaner
+406	Vehicle
+407	Vehicle horn, car horn, honking, toot
+408	Velcro, hook and loop fastener
+409	Video game sound
+410	Wail, moan
+411	Walk, footsteps
+412	Washing machine
+413	Water
+414	Water tap, faucet
+415	Waterfall
+416	Waves, surf
+417	Whack, thwack
+418	Whale vocalization
+419	Wheeze
+420	Whimper
+421	Whimper (dog)
+422	Whip
+423	Whir
+424	Whispering
+425	Whistle
+426	Whistling
+427	White noise, pink noise
+428	Whoop
+429	Whoosh, swoosh, swish
+430	Wild animals
+431	Wildfire
+432	Wind
+433	Wind chime
+434	Wind noise (microphone)
+435	Windscreen wiper, windshield wiper
+436	Wobble
+437	Wolf-whistling
+438	Wood
+439	Writing
+440	Yak
+441	Yawn
+442	Yell
+443	Yip
+444	Yodeling
+445	Zing
+446	Zipper (clothing)
