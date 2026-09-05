@@ -1,11 +1,15 @@
 # AVRA-Metadata-Extractor
 
-> **2nd Place — KilometerAudio Track, Perception Test Challenge 2026**
+> **Winner — KilometerAudio Track, Perception Test Challenge 2026**
 >
 > **Team IUCV · Indiana University Bloomington**
 
 [Challenge](https://eval.ai/web/challenges/challenge-page/2706/overview) ·
-[Solver](https://github.com/juhha/AVRA-Solver)
+[Metadata Extractor](https://github.com/eazziz/AVRA-Metadata-Extractor)
+
+AVRA (Audio–Visual Reasoning Agent) is a training-free system for multiple-choice question answering over long videos. It uses generic metadata to localize candidate moments, directly inspects the corresponding source media, and records evidence before selecting an answer.
+
+
 
 ## Challenge Result
 
@@ -18,15 +22,14 @@
 | Score | 0.78 top-1 accuracy |
 | Evaluation | Zero-shot with frozen model weights; no training or fine-tuning |
 
-## Overview
+ ## Overview
 
 AVRA's solver relies on a precomputed, query-agnostic metadata index to
-localize relevant moments in long videos. AVRA-Metadata-Extractor produces that
-index. Given a set of source videos, it runs three independent extraction
-pipelines — sound event detection (SED), object detection, and optical character
-recognition (OCR) — and writes a per-video file for each: an SED index, an
-object-detection index, and an OCR index. The downstream solver reads these
-files directly and never touches the raw media during search.
+localize relevant moments in long videos. AVRA-Metadata-Extractor produces
+that index. Given a set of source videos, it runs three independent extraction
+pipelines — sound event detection (SED), object detection, and optical
+character recognition (OCR) — and writes a unified per-video metadata file
+that the downstream solver can search without touching raw media.
 
 The extraction is entirely offline and model-agnostic with respect to the
 question-answering task: no answer options, questions, or task-specific
@@ -44,12 +47,11 @@ support multiple solver configurations or future challenge tracks.
 3. **Recognize on-screen text.** An OCR stage extracts visible text from
    sampled frames with timestamps, capturing titles, captions, signs, and
    other readable content.
-4. **Write the index.** Each pipeline writes its own per-video file — the SED
-   matrix, the object detections, and the OCR results — in the layout
-   [AVRA-Solver](https://github.com/juhha/AVRA-Solver) expects as its
-   `data_root`.
-5. **Validate.** Deterministic checks confirm that every video's metadata files
-   are present and well-formed before solver runs begin.
+4. **Merge and format.** Per-pipeline outputs are merged into a single
+   structured metadata file per video, following the schema expected by
+   [AVRA-Solver](https://github.com/juhha/AVRA-Solver).
+5. **Validate.** Deterministic checks confirm that every video in the dataset
+   has a complete, well-formed metadata file before solver runs begin.
 
 ## Install
 
@@ -131,6 +133,5 @@ If you use AVRA in your research, please cite:
 
 ## License
 
-Released under the [MIT License](LICENSE). Third-party components retain their
-own licenses — see [NOTICE](NOTICE); note that the optional `objects` extra
-pulls in `ultralytics` (AGPL-3.0).
+Released under the [MIT License](LICENSE).
+](https://github.com/edredelijah-boop/hello)
