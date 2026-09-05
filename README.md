@@ -99,11 +99,6 @@ expects. See **[docs/USAGE.md](docs/USAGE.md)**.
 | [Models](docs/MODELS.md) | Exact checkpoints, versions, licenses |
 | [Reproducibility](docs/REPRODUCIBILITY.md) | What is deterministic and what is not |
 
-## What this repo does not contain
-
-Source videos, challenge questions or answers, model weights, the AVRA solver
-itself (see [AVRA-Solver](https://github.com/juhha/AVRA-Solver)), or any Gemini /
-LLM answering code. You supply videos; the extractor supplies metadata.
 
 ## Team
 
