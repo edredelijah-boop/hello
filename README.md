@@ -1,34 +1,55 @@
 # AVRA-Metadata-Extractor
 
-> Companion to **[AVRA-Solver](https://github.com/juhha/AVRA-Solver)** —
-> **2nd Place, KilometerAudio Track, Perception Test Challenge 2026** ·
+> **2nd Place — KilometerAudio Track, Perception Test Challenge 2026**
+>
 > **Team IUCV · Indiana University Bloomington**
 
-AVRA answers multiple-choice questions about long videos by first searching a
-precomputed, query-agnostic index of what can be heard and seen, then inspecting
-the source media directly. This repository builds that index.
+[Challenge](https://eval.ai/web/challenges/challenge-page/2706/overview) ·
+[Solver](https://github.com/juhha/AVRA-Solver)
 
-Given a source video it produces three per-video metadata streams:
+## Challenge Result
 
-| Artifact | Model | Rate | Contents |
-| --- | --- | --- | --- |
-| `<video_id>.npy` | BEATs strong SED (PretrainedSED) | 40 ms / 25 Hz | frame-level scores for 447 AudioSet classes |
-| `<video_id>_detections.json` | YOLOE open-vocabulary detector | 2 fps | class, confidence, timestamp, bbox |
-| `<video_id>_ocr.json` | PP-OCRv6 (PaddleOCR) | 2 fps | recognized text, normalized text, confidence, timestamp |
+| Item | Result |
+| --- | --- |
+| Challenge | Perception Test Challenge 2026 |
+| Track | KilometerAudio |
+| Team | IUCV |
+| Ranking | 2nd place |
+| Score | 0.78 top-1 accuracy |
+| Evaluation | Zero-shot with frozen model weights; no training or fine-tuning |
 
-These are **noisy search indices for candidate localization**, not ground truth
-and not final answer evidence. The solver verifies every candidate moment in the
-source media.
+## Overview
 
-## What this repo is
+AVRA's solver relies on a precomputed, query-agnostic metadata index to
+localize relevant moments in long videos. AVRA-Metadata-Extractor produces that
+index. Given a set of source videos, it runs three independent extraction
+pipelines — sound event detection (SED), object detection, and optical character
+recognition (OCR) — and writes a per-video file for each: an SED index, an
+object-detection index, and an OCR index. The downstream solver reads these
+files directly and never touches the raw media during search.
 
-The metadata-extraction half of the scored AVRA system, lifted out of a much
-larger research codebase and rewritten as a small installable package. It takes
-videos in and writes an [AVRA-Solver](https://github.com/juhha/AVRA-Solver)
-`data_root` out.
+The extraction is entirely offline and model-agnostic with respect to the
+question-answering task: no answer options, questions, or task-specific
+fine-tuning influence the metadata. This separation allows the same index to
+support multiple solver configurations or future challenge tracks.
 
-The scored submission used BEATs strong SED, YOLOE (`yoloe-11l-seg`), and
-PP-OCRv6 with the parameters that are the defaults here.
+## How It Works
+
+1. **Extract audio events.** A sound event detection model processes each
+   video's audio track and produces timestamped event labels with confidence
+   scores.
+2. **Detect visual objects.** An object detection model (YOLOE) runs over
+   sampled video frames and records bounding boxes, class labels, and
+   timestamps.
+3. **Recognize on-screen text.** An OCR stage extracts visible text from
+   sampled frames with timestamps, capturing titles, captions, signs, and
+   other readable content.
+4. **Write the index.** Each pipeline writes its own per-video file — the SED
+   matrix, the object detections, and the OCR results — in the layout
+   [AVRA-Solver](https://github.com/juhha/AVRA-Solver) expects as its
+   `data_root`.
+5. **Validate.** Deterministic checks confirm that every video's metadata files
+   are present and well-formed before solver runs begin.
 
 ## Install
 
@@ -84,26 +105,32 @@ LLM answering code. You supply videos; the extractor supplies metadata.
 
 ## Team
 
-**Team IUCV** — Luddy School of Informatics, Computing, and Engineering,
-Indiana University Bloomington.
+**Team IUCV**<br>
+Luddy School of Informatics, Computing, and Engineering<br>
+Indiana University Bloomington
 
-- **Edred Azziz\*** · **Juhyung Ha\*** · **David Crandall†**
+- **Edred Azziz<sup>*</sup>**
+- **Juhyung Ha<sup>*</sup>**
+- **David Crandall<sup>†</sup>**
 
-\* Equal contribution.  † Corresponding author.
+<sup>*</sup> Equal contribution.<br>
+<sup>†</sup> Corresponding author.
 
 ## Citation
+
+If you use AVRA in your research, please cite:
 
 ```bibtex
 @software{azziz2026avra,
   author = {Edred Azziz and Juhyung Ha and David Crandall},
-  title  = {AVRA: Agentic Audio--Visual Reasoning for Long Videos},
-  year   = {2026},
-  url    = {https://github.com/eazziz/AVRA-Metadata-Extractor}
+  title = {AVRA-Solver: Agentic Audio--Visual Reasoning for Long Videos},
+  year = {2026},
+  url = {https://github.com/juhha/AVRA-Solver}
 }
 ```
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Third-party components (vendored BEATs, and the
-optional Ultralytics and PaddleOCR dependencies) retain their own licenses;
-see [NOTICE](NOTICE). Note that `ultralytics` is **AGPL-3.0**.
+Released under the [MIT License](LICENSE). Third-party components retain their
+own licenses — see [NOTICE](NOTICE); note that the optional `objects` extra
+pulls in `ultralytics` (AGPL-3.0).
