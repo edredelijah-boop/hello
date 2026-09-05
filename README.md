@@ -54,14 +54,22 @@ support multiple solver configurations or future challenge tracks.
    has a complete, well-formed metadata file before solver runs begin.
 
 ## Install
-
+ 
+AVRA runs its metadata extraction directly on the host machine. The extractor produces the per-video index that
+[AVRA-Solver](https://github.com/juhha/AVRA-Solver) reads at solve time.
+ 
 ```bash
+git clone https://github.com/edredelijah-boop/hello.git
+cd hello
+ 
 python -m venv .venv && source .venv/bin/activate
 pip install ".[all]"          # or ".[objects]" / ".[text]" for one stage
 ```
-
-`ffmpeg` and `ffprobe` must be on `PATH`. Model weights are fetched separately —
-see **[docs/INSTALLATION.md](docs/INSTALLATION.md)** and
+ 
+You will also need `ffmpeg` and `ffprobe` on your `PATH`, and one model
+checkpoint downloaded manually (BEATs). Full details — including per-stage
+extras, GPU recommendations, and weight download links — are in
+**[docs/INSTALLATION.md](docs/INSTALLATION.md)** and
 **[docs/MODELS.md](docs/MODELS.md)**.
 
 ## Quick start
