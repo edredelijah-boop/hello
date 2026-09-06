@@ -5,7 +5,7 @@
 > **Team IUCV · Indiana University Bloomington**
 
 [Challenge](https://eval.ai/web/challenges/challenge-page/2706/overview) ·
-[Metadata Extractor](https://github.com/eazziz/AVRA-Metadata-Extractor)
+[Solver](https://github.com/juhha/AVRA-Solver/)
 
 AVRA (Audio–Visual Reasoning Agent) is a training-free system for multiple-choice question answering over long videos. It uses generic metadata to localize candidate moments, directly inspects the corresponding source media, and records evidence before selecting an answer.
 
@@ -71,7 +71,6 @@ checkpoint downloaded manually (BEATs). Full details — including per-stage
 extras, GPU recommendations, and weight download links — are in
 **[docs/INSTALLATION.md](docs/INSTALLATION.md)** and
 **[docs/MODELS.md](docs/MODELS.md)**.
-
 
 
 ## Documentation
