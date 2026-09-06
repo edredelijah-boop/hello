@@ -72,30 +72,7 @@ extras, GPU recommendations, and weight download links — are in
 **[docs/INSTALLATION.md](docs/INSTALLATION.md)** and
 **[docs/MODELS.md](docs/MODELS.md)**.
 
-## Quick start
 
-Structural self-test (no ffmpeg, no models, no network):
-
-```bash
-./tests/smoke-offline.sh
-```
-
-Extract everything for one video:
-
-```bash
-export AVRA_BEATS_CHECKPOINT=/path/to/BEATs_strong_1.pt
-avra-extract all /path/to/video.mp4 --data-root ./data_root
-./scripts/validate.sh ./data_root
-```
-
-Batch a directory of videos:
-
-```bash
-./scripts/run-batch.sh /path/to/videos --data-root ./data_root
-```
-
-The `data_root/` that comes out is exactly what AVRA-Solver's `scripts/prepare.sh`
-expects. See **[docs/USAGE.md](docs/USAGE.md)**.
 
 ## Documentation
 
